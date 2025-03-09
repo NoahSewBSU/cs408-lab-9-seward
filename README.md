@@ -15,10 +15,4 @@ permission from your instructor.
 
 A simple bulleted list below is sufficient. For example:
 
-- Bootstrap: https://getbootstrap.com/
-- jQuery: https://jquery.com/
-- Background image: https://unsplash.com/photos/...
-- Sound effects: https://freesound.org/people/...
-- Icons: https://fontawesome.com/
-- Fonts: https://fonts.google.com/
-- etc.
+- Rep JS val in HTML: https://www.w3schools.com/js/js_htmldom_html.asp

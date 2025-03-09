@@ -18,6 +18,17 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+// functions to update the ballCount to html
+
+const ballCountElement = document.getElementById('ballCount');
+
+function updateBallCount() {
+  ballCountElement.textContent = ballCount;
+  if (ballCount === 0) {
+    ballCountElement.textContent = "All gone, you win!";
+  }
+}
+
 class Shape {
   constructor(x, y, velX, velY) {
     this.x = x;
@@ -143,6 +154,8 @@ class EvilCircle extends Shape {
 
         if (distance < this.size + ball.size) {
           ball.exists = false;
+          ballCount -= 1;
+          updateBallCount();
         }
       }
     }
@@ -152,6 +165,8 @@ class EvilCircle extends Shape {
 const balls = [];
 
 const evilCircle = new EvilCircle(50, 50);
+
+var ballCount = 0;
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -167,6 +182,7 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  ballCount += 1;
 }
 
 function loop() {
